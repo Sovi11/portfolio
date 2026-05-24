@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poker — Pravar Kataria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar--scrolled" id="navbar">
+        <a href="index.html" class="nav-logo">PK</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#work">Work</a></li>
+            <li><a href="index.html#interests">Interests</a></li>
+            <li><a href="index.html#thoughts">Thoughts</a></li>
+            <li><a href="index.html#life">Life</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    </nav>
+
+    <div class="detail-hero">
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to home</a>
+            <div class="detail-hero-eyebrow">♠ ♥ ♣ ♦</div>
+            <h1 class="detail-hero-title">Poker</h1>
+            <p class="detail-hero-sub">Variance, reads, and staying rational under uncertainty. It's not a coincidence that traders are drawn to this game.</p>
+        </div>
+    </div>
+
+    <!-- FORMAT -->
+    <div class="detail-section">
+        <div class="container">
+            <div class="section-eyebrow">How I play</div>
+            <h2 class="section-heading">Cash games, mostly</h2>
+            <p class="detail-lead">Tournaments are exciting. Cash games are where the real work is. The depth of decisions in a cash game — pot geometry, range construction, exploitative vs. GTO lines — is a different beast from tournament poker, where stack dynamics and ICM pressure dominate thinking.</p>
+
+            <div class="detail-grid-2">
+                <div class="detail-card reveal">
+                    <div class="detail-card-label">Why cash</div>
+                    <h3>Decisions per hour</h3>
+                    <p>Cash games run deeper and faster in terms of meaningful spots. You're playing more hands, making more close decisions, and getting real-time feedback on whether your reads and lines are working.</p>
+                </div>
+                <div class="detail-card reveal">
+                    <div class="detail-card-label">The mental game</div>
+                    <h3>Variance tolerance</h3>
+                    <p>You can play perfectly and lose for weeks. Managing that — staying process-oriented, not results-oriented — is the same muscle you use in trading. The edge is real; the variance around it is brutal.</p>
+                </div>
+                <div class="detail-card reveal">
+                    <div class="detail-card-label">What poker teaches</div>
+                    <h3>Probabilistic thinking</h3>
+                    <p>Every decision is a distribution, not a point. The best play with two aces can still lose to garbage. The habit of thinking in probabilities, not outcomes, is genuinely transferable.</p>
+                </div>
+                <div class="detail-card reveal">
+                    <div class="detail-card-label">The read</div>
+                    <h3>Exploitative play</h3>
+                    <p>Game theory gives you a baseline. But most players have exploitable leaks — bet-sizing tells, range imbalances, tilt patterns. Finding and adjusting to those is where the money is at recreational stakes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOURNAMENT -->
+    <div class="detail-section-alt">
+        <div class="container">
+            <div class="section-eyebrow">Live results</div>
+            <h2 class="section-heading">Tournament play</h2>
+            <div class="poker-result reveal">
+                <div class="poker-result-badge">🏆 3rd Place</div>
+                <div class="poker-result-body">
+                    <h3>IITD College Poker Tournament</h3>
+                    <p>Made the final table and finished third in the college-wide tournament. Multi-table format — the variance is higher, the ICM math kicks in, and surviving deep runs requires adjusting strategy as stacks shorten. Bubbled a few spots I shouldn't have and learned the hard way what ICM pressure actually feels like when it's your money on the line.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CROSSOVER -->
+    <div class="detail-section">
+        <div class="container">
+            <div class="section-eyebrow">The overlap</div>
+            <h2 class="section-heading">Why traders play poker</h2>
+            <p class="detail-lead">It's not random that trading desks are full of poker players. The overlap is structural.</p>
+            <div class="pill-list">
+                <span class="pill pill-accent">Thinking in EV, not outcomes</span>
+                <span class="pill pill-accent">Staying calm in losing runs</span>
+                <span class="pill pill-accent">Reading patterns and adjusting</span>
+                <span class="pill">Bet sizing as information</span>
+                <span class="pill">Position and timing</span>
+                <span class="pill">Exploiting systematic leaks</span>
+                <span class="pill">Bankroll management</span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Pravar Kataria · <a href="index.html">← Back to home</a></p>
+    </footer>
+
+    <style>
+        .poker-result {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .poker-result:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .poker-result-badge {
+            font-size: 1.5rem;
+            background: linear-gradient(135deg, var(--primary-soft), #fff);
+            border: 1px solid rgba(91,95,239,0.2);
+            border-radius: var(--radius);
+            padding: 1.25rem 1.5rem;
+            text-align: center;
+            white-space: nowrap;
+            font-weight: 700;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .poker-result-body h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 0.75rem;
+        }
+
+        .poker-result-body p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        @media (max-width: 600px) {
+            .poker-result { flex-direction: column; }
+        }
+    </style>
+
+    <script>
+        document.getElementById('navToggle').addEventListener('click', () => {
+            document.getElementById('navLinks').classList.toggle('open');
+            document.getElementById('navToggle').classList.toggle('open');
+        });
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('revealed'), i * 80); obs.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    </script>
+</body>
+</html>
