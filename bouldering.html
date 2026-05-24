@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouldering — Pravar Kataria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar--scrolled" id="navbar">
+        <a href="index.html" class="nav-logo">PK</a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#work">Work</a></li>
+            <li><a href="index.html#interests">Interests</a></li>
+            <li><a href="index.html#thoughts">Thoughts</a></li>
+            <li><a href="index.html#life">Life</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    </nav>
+
+    <div class="detail-hero">
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to home</a>
+            <div class="detail-hero-eyebrow">🧗</div>
+            <h1 class="detail-hero-title">Bouldering</h1>
+            <p class="detail-hero-sub">No ropes. No harness. Just you, the wall, and a problem to solve. Bouldering is chess for your body — and the beta doesn't always come from where you expect.</p>
+        </div>
+    </div>
+
+    <!-- WHAT IS IT -->
+    <div class="detail-section">
+        <div class="container">
+            <div class="section-eyebrow">The sport</div>
+            <h2 class="section-heading">What bouldering actually is</h2>
+            <p class="detail-lead">Bouldering is climbing on short walls — usually 4–5 metres — without ropes or harnesses, with a crash pad below. Each route is called a "problem," and problems are graded by difficulty. The goal is to reach the top using only the holds marked for that problem.</p>
+
+            <div class="detail-grid-2">
+                <div class="detail-card reveal">
+                    <div class="detail-card-label">Movement</div>
+                    <h3>Full-body problem solving</h3>
+                    <p>Every problem is a sequence of moves — footwork, body positioning, tension, timing. Getting it wrong at move seven means starting over. Getting it right feels like cracking a code.</p>
+                </div>
+                <div class="detail-card reveal">
+                    <div class="detail-card-label">Mental game</div>
+                    <h3>The "beta"</h3>
+                    <p>Beta is the sequence of moves used to solve a problem. You can try your own beta or learn from others — but sometimes the obvious solution isn't the right one, and you have to see the wall differently to progress.</p>
+                </div>
+                <div class="detail-card reveal">
+                    <div class="detail-card-label">Physical</div>
+                    <h3>Strength meets precision</h3>
+                    <p>Raw grip strength gets you started. Technique — silent feet, hip placement, reading your center of gravity — takes you further. The balance between brute force and finesse shifts as grades go up.</p>
+                </div>
+                <div class="detail-card reveal">
+                    <div class="detail-card-label">The grade</div>
+                    <h3>V-scale progression</h3>
+                    <p>Problems run from V0 (beginner) to V17 (world-class elite). Each grade jump is a genuine step up in body tension, contact strength, and spatial problem-solving. The progression is addictive.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WHY IT FITS -->
+    <div class="detail-section-alt">
+        <div class="container">
+            <div class="section-eyebrow">Why I climb</div>
+            <h2 class="section-heading">Presence by necessity</h2>
+            <p class="detail-lead">Most activities let your mind wander. Bouldering doesn't. When you're five moves into a hard problem, you're not thinking about markets or code — you're entirely in the wall. That forced presence is part of why it works as a counterweight to desk-heavy work.</p>
+
+            <div class="detail-grid-2">
+                <div class="detail-card reveal">
+                    <div class="detail-card-label">The reset</div>
+                    <h3>Physical and mental</h3>
+                    <p>An hour of climbing drains a different kind of battery than a day of intellectual work. You leave a session physically spent but mentally clear — which is a rare combination to find in a single activity.</p>
+                </div>
+                <div class="detail-card reveal">
+                    <div class="detail-card-label">The habit</div>
+                    <h3>Problems that wait for you</h3>
+                    <p>A problem you couldn't finish today will still be there next week. Coming back to something with fresh eyes — after sleep, after thinking about it — and suddenly seeing the solution is a feeling that never gets old.</p>
+                </div>
+            </div>
+
+            <div class="pill-list" style="margin-top: 2rem;">
+                <span class="pill pill-accent">Indoor bouldering</span>
+                <span class="pill">Footwork & technique</span>
+                <span class="pill">Overhang problems</span>
+                <span class="pill">Dynamic moves</span>
+                <span class="pill">Slab climbing</span>
+                <span class="pill">Project sessions</span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Pravar Kataria · <a href="index.html">← Back to home</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('navToggle').addEventListener('click', () => {
+            document.getElementById('navLinks').classList.toggle('open');
+            document.getElementById('navToggle').classList.toggle('open');
+        });
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('revealed'), i * 80); obs.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    </script>
+</body>
+</html>
